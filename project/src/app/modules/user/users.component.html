@@ -1,0 +1,26 @@
+<h1>Users</h1>
+<button [routerLink]="['/users', 'new']">Add user</button>
+<table *ngIf="users$ | async as users; else loading">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users; let i as index">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>
+                <button [routerLink]="['/users', user.id]">
+                    profile
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #loading>
+    <p>Loading...</p>
+</ng-template>
