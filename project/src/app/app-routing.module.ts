@@ -16,11 +16,15 @@ const routes: Routes = [
     }
   },
   {
-    path: 'users',
+    path: 'basic-child',
     loadChildren: function () {
-      return import('./modules/user/users.module').then(function (module) {
-        return module.UsersModule
-      })
+      return import('./modules/basic-child/basic-child.module').then(module => module.BasicChildModule)
+    }
+  },
+  {
+    path: 'nested-routes',
+    loadChildren: function () {
+      return import('./modules/nested-routes/nested-routes.module').then(module => module.NestedRoutesModule)
     }
   }
 ];

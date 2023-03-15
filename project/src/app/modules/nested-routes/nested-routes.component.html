@@ -1,0 +1,12 @@
+<p>nested-routes works!</p>
+<button class="card" role="button" routerLink="one">
+    <p>
+        One nested route
+    </p>
+</button>
+<button class="card" role="button" [routerLink]="['another']">
+    <p>
+        Another nested route
+    </p>
+</button>
+<router-outlet></router-outlet>

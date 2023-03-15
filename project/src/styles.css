@@ -9,27 +9,12 @@ button {
     box-sizing: border-box;
     padding: 0.5rem 1rem;
     transition: transform ease-in-out 200ms;
+    cursor: pointer;
 }
 
-button:hover {
-    transform: scale(1.1);
-}
-
-table {
-    width: 100%;
-}
-
-th {
+.card {
+    border-radius: 5px;
     box-sizing: border-box;
     padding: 1rem;
-    font-size: 1.5rem;
-}
-
-td {
-    text-align: center;
-    border: 1px solid gray;
-
-    box-sizing: border-box;
-    padding: 0.5rem;
-    margin: 0;
+    background-color: darkorange;
 }
